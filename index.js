@@ -51,7 +51,6 @@ function hideError1() {
 }
 
 function hideError2() {
-  console.log("here");
   cashMessage.style.display = "none";
 }
 
