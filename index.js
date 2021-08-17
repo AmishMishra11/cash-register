@@ -21,9 +21,11 @@ nextButton.addEventListener("click", function takeCash() {
 
 checkButton.addEventListener("click", function giveBillAmount() {
   hideError2();
+  var cashValue = Number(cashGiven.value);
+  var billValue = Number(billAmount.value);
 
-  if (cashGiven.value >= billAmount.value) {
-    const amountRetrun = cashGiven.value - billAmount.value;
+  if (cashValue >= billValue) {
+    const amountRetrun = cashValue - billValue;
     showTable();
     calculateChange(amountRetrun);
   } else {
