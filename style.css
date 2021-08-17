@@ -33,7 +33,12 @@
 .tableHide {
   display: none;
 }
-
+caption {
+  padding: 0rem 1rem 1rem 1rem;
+  color: black;
+  tab-size: large;
+  font-weight: bold;
+}
 table {
   border: 1px solid black;
   background-color: #3b82f6;
