@@ -1,26 +1,35 @@
 const billAmount = document.querySelector("#bill-amt");
+const nextButton = document.querySelector("#next");
+const billMessage = document.querySelector("#bill-message");
 const cashGiven = document.querySelector("#cash-give");
 const checkButton = document.querySelector("#check-button");
-const message = document.querySelector("#error-message");
+const cashMessage = document.querySelector("#cash-message");
+
 const noOfNotes = document.querySelectorAll(".no-of-notes");
+const table = document.querySelector("#table-id");
 
 const notes = [2000, 500, 100, 20, 10, 5, 1];
 
-checkButton.addEventListener("click", function giveBillAmount() {
-  console.log(cashGiven.value);
-  console.log(billAmount.value);
-  hideError();
+nextButton.addEventListener("click", function takeCash() {
+  hideError1();
   if (billAmount.value > 0) {
-    if (cashGiven.value >= billAmount.value) {
-      const amountRetrun = cashGiven.value - billAmount;
-      calculateChange(amountRetrun);
-    } else {
-      showError(
-        "The cash provided should be greater than or equla to bill amount "
-      );
-    }
+    showCash();
   } else {
-    showError("The  bill amount should be greater then 0");
+    showError1("The  bill amount should be greater then 0");
+  }
+});
+
+checkButton.addEventListener("click", function giveBillAmount() {
+  hideError2();
+
+  if (cashGiven.value >= billAmount.value) {
+    const amountRetrun = cashGiven.value - billAmount.value;
+    showTable();
+    calculateChange(amountRetrun);
+  } else {
+    showError2(
+      "The cash provided should be greater than or equla to bill amount "
+    );
   }
 });
 
@@ -32,11 +41,30 @@ function calculateChange(amountRetrun) {
   }
 }
 
-function hideError() {
-  message.style.display = "none";
+function showCash() {
+  cashGiven.style.display = "block";
+  checkButton.style.display = "block";
 }
 
-function showError(msg) {
-  message.style.display = "block";
-  message.innerText = msg;
+function hideError1() {
+  billMessage.style.display = "none";
+}
+
+function hideError2() {
+  console.log("here");
+  cashMessage.style.display = "none";
+}
+
+function showError1(msg) {
+  billMessage.style.display = "block";
+  billMessage.innerText = msg;
+}
+
+function showError2(msg) {
+  cashMessage.style.display = "block";
+  cashMessage.innerText = msg;
+}
+
+function showTable() {
+  table.style.display = "block";
 }

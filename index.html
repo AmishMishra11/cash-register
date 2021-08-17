@@ -15,12 +15,14 @@
         minimun number of notes to return
       </p>
       <label for="bill-amt">Bill Amount:</label>
-      <input id="bill-amt" type="number" name="" />
-      <label for="cash-give">Cash given:</label>
-      <input id="cash-give" type="text" />
-      <button id="check-button">Check</button>
-      <p id="error-message"></p>
-      <table class="table">
+      <input class="input" id="bill-amt" type="text" />
+      <button class="button" id="next">Next</button>
+      <p id="bill-message"></p>
+      <label class="cashHide" for="cash-give">Cash given:</label>
+      <input class="input cashHide" id="cash-give" type="text" />
+      <button class="button cashHide" id="check-button">Check</button>
+      <p id="cash-message"></p>
+      <table id="table-id" class="table">
         <caption>
           Return Change
         </caption>

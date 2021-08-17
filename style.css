@@ -1,5 +1,35 @@
 .container {
+  text-align: center;
   display: flex;
   flex-direction: column;
   width: 50vw;
+  max-width: 600px;
+  margin: auto;
+  background-color: lightblue;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.header {
+  color: #3b82f6;
+}
+.button {
+  margin: 5px;
+  align-self: center;
+  width: 5rem;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+.input {
+  padding: 1rem 1.5rem;
+}
+
+.cashHide {
+  display: none;
+}
+
+.table {
+  display: none;
 }
