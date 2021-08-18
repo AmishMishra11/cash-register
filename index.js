@@ -4,7 +4,7 @@ const billMessage = document.querySelector("#bill-message");
 const cashGiven = document.querySelector("#cash-give");
 const checkButton = document.querySelector("#check-button");
 const cashMessage = document.querySelector("#cash-message");
-
+const cashTitle = document.querySelector(".title");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
 const table = document.querySelector("#table-id");
 
@@ -46,6 +46,7 @@ function calculateChange(amountRetrun) {
 function showCash() {
   cashGiven.style.display = "block";
   checkButton.style.display = "block";
+  cashTitle.style.display = "block";
 }
 
 function hideError1() {
