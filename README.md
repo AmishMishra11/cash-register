@@ -1,2 +1,3 @@
 # cash-register
-A web app where you enter bill amount and cash given and itll tell you the least number of bills required to give the remaining change
+This is a Cash Register web app.
+Here when you enter the bill amount and cash given , it'll tell you the least number of bills required to give the remaining change.
